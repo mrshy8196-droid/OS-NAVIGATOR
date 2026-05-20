@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<style> 
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: AliceBlue; color: #333; margin: 0; padding: 0; }
+.header { background-color: White; padding: 30px 0; text-align: center; border-bottom: 5px solid RoyalBlue; width: 100%; box-sizing: border-box; }
+.header h1 { margin: 0; font-size: 35px; color: navy; }
+.header p { margin: 5px 0 0; color: Gray; font-weight: bold; }
+.box { max-width: 1150px; margin: 40px auto; background: White; padding: 40px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; }
+ h1.quiz-title { text-align: center; color: RoyalBlue; border-bottom: 2px solid LightSteelBlue; padding-bottom: 15px; margin-top: 0; }
+.section-title { background: GhostWhite; padding: 15px; border-radius: 8px; color: RoyalBlue; margin-top: 30px; font-weight: bold; border-right: 4px solid CornflowerBlue; }
+.question { margin: 25px 0; padding: 20px; border-left: 6px solid RoyalBlue; background: #fafafa; border-radius: 0 10px 10px 0;}
+.options label { display: block; padding: 10px; cursor: pointer; transition: 0.2s; border-radius: 5px;}
+.options label:hover { background: #f1f1f1; }
+input[type="radio"] { margin-right: 15px; cursor: pointer; transform: scale(1.3); }
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding:             12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-container { text-align: center; margin-top: 40px; margin-bottom: 20px; width: 100%; }
+.btn-container button:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-result { background-color: navy; color: white; padding: 15px 40px; border: 2px solid cornflowerblue; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.4s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.btn-result:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; box-shadow: 0 6px 15px cornflowerblue !important; }
+
+#result { 
+    margin-top: 30px; font-size: 28px; font-weight: bold; text-align: center; display: none; 
+    padding: 30px; color: Navy; background-color: AliceBlue; border: 2px solid CornflowerBlue; border-radius: 15px; box-shadow: 0 0 20px CornflowerBlue
+}
+</style>
+</head> 
+<body> 
+<div class="header">
+    <h1>OS <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+    <p>Operating Systems Practical Lab </p>
+</div>
+
+<div class="box"> 
+<h1><span style="color: royalblue;">Quiz Section 3 </span></h1> 
+<form id="quizForm"> 
+
+<div class="section-title">Choose from multiple(20 Questions)</div> 
+
+<div class="question">1. Which symbol represents zero or more characters?<div class="options"><label><input type="radio" name="q1" value="0"> ? </label><label><input type="radio" name="q1" value="1"> *</label><label><input type="radio" name="q1" value="0"> #  </label><label><input type="radio" name="q1" value="0"> $ </label></div></div> 
+
+<div class="question">2. Which symbol represents exactly one character?<div class="options"><label><input type="radio" name="q2" value="0"> *</label><label><input type="radio" name="q2" value="1"> ?</label><label><input type="radio" name="q2" value="0"> !  </label><label><input type="radio" name="q2" value="0"> @ </label></div></div> 
+
+<div class="question">3. How to display all files that end with .pdf?<div class="options"><label><input type="radio" name="q3" value="0"> dir pdf.* </label><label><input type="radio" name="q3" value="0"> dir pdf* </label><label><input type="radio" name="q3" value="0">  dir *pdf </label><label><input type="radio" name="q3" value="1"> dir *.pdf </label></div></div> 
+
+<div class="question">4. What does '???.txt' represent?<div class="options"><label><input type="radio" name="q4" value="0"> Any length</label><label><input type="radio" name="q4" value="1"> Exactly 3 characters </label><label><input type="radio" name="q4" value="0"> Exactly 2 characters</label><label><input type="radio" name="q4" value="0"> Exactly 1 character</label></div></div> 
+
+<div class="question">5. Command to hide a file named 'note.txt'?<div class="options"><label><input type="radio" name="q5" value="1">attrib +h note.txt </label><label><input type="radio" name="q5" value="0"> attrib -h  </label><label><input type="radio" name="q5" value="0"> set +h </label><label><input type="radio" name="q5" value="0"> set -h </label></div></div> 
+
+<div class="question">6. To remove read-only attribute, we use:<div class="options"><label><input type="radio" name="q6" value="0"> -S</label><label><input type="radio" name="q6" value="0"> +R   </label><label><input type="radio" name="q6" value="1"> -R</label><label><input type="radio" name="q6" value="0"> +S  </label></div></div> 
+
+<div class="question">7. 'DIR *2021*' will find which file?<div class="options"><label><input type="radio" name="q7" value="0">  2021.txt </label><label><input type="radio" name="q7" value="0"> data2021.doc  </label><label><input type="radio" name="q7" value="0"> notes2021</label><label><input type="radio" name="q7" value="1"> All of them </label></div></div> 
+
+<div class="question">8. Which command deletes all files starting with 'A'?<div class="options"><label><input type="radio" name="q8" value="0"> del A  </label><label><input type="radio" name="q8" value="1"> del A*   </label><label><input type="radio" name="q8" value="0"> del *A </label><label><input type="radio" name="q8" value="0"> remove A</label></div></div> 
+
+<div class="question">9. 'ATTRIB +S' makes the file a:<div class="options"><label><input type="radio" name="q9" value="1"> System file </label><label><input type="radio" name="q9" value="0"> Secret file </label><label><input type="radio" name="q9" value="0"> Super file</label><label><input type="radio" name="q9" value="0"> Suber file</label></div></div> 
+
+<div class="question">10. 'copy a* files' - where is the source?<div class="options"><label><input type="radio" name="q10" value="1"> a* </label><label><input type="radio" name="q10" value="0"> Folderes </label><label><input type="radio" name="q10" value="0"> files </label><label><input type="radio" name="q10" value="0"> copy</label></div></div>
+
+<div class="question">11.  '??.jpg' matches which file?<div class="options"><label><input type="radio" name="q11" value="0"> abc.jpg</label><label><input type="radio" name="q11" value="0"> ABC.jpg </label><label><input type="radio" name="q11" value="0"> photo.jpg </label><label><input type="radio" name="q11" value="1"> me.jpg  </label></div></div> 
+
+<div class="question">12.How to show a hidden file again?<div class="options"><label><input type="radio" name="q12" value="0"> +S </label><label><input type="radio" name="q12" value="0"> -S  </label><label><input type="radio" name="q12" value="1"> -H  </label><label><input type="radio" name="q12" value="0"> +H  </label></div></div> 
+
+<div class="question">13. Attribute to prevent editing (Read-only)?<div class="options"><label><input type="radio" name="q13" value="0"> +H</label><label><input type="radio" name="q13" value="0"> +s</label><label><input type="radio" name="q13" value="0"> -R </label><label><input type="radio" name="q13" value="1"> +R</label></div></div> 
+
+<div class="question">14. What does 'DEL *.*' do?<div class="options"><label><input type="radio" name="q14" value="1"> Deletes all files  </label><label><input type="radio" name="q14" value="0"> Deletes all folders   </label><label><input type="radio" name="q14" value="0"> Format PC </label><label><input type="radio" name="q14" value="0"> Format CPU </label></div></div> 
+
+<div class="question">15. Which wildcard is called 'Asterisk'?<div class="options"><label><input type="radio" name="q15" value="1"> * </label><label><input type="radio" name="q15" value="0"> ?  </label><label><input type="radio" name="q15" value="0"> #  </label><label><input type="radio" name="q15" value="0"> %</label></div></div> 
+
+<div class="question">16. To use 'COPY', the destination folder must:<div class="options"><label><input type="radio" name="q16" value="0"> Be empty   </label><label><input type="radio" name="q16" value="1"> Already exist </label><label><input type="radio" name="q16" value="0"> Be hidden  </label><label><input type="radio" name="q16" value="0"> Be deleted </label></div></div> 
+
+<div class="question">17. If you copy a file to a place where a file with same name exists:<div class="options"><label><input type="radio" name="q17" value="0"> It deletes  </label><label><input type="radio" name="q17" value="0"> It fails  </label><label><input type="radio" name="q17" value="1"> It overwrites   </label><label><input type="radio" name="q17" value="0"> It hiddenes </label></div></div> 
+
+<div class="question">18. Multiple attributes (like +H and +R) can be used together?<div class="options"><label><input type="radio" name="q18" value="1"> true </label><label><input type="radio" name="q18" value="0"> false </label></div></div> 
+
+<div class="question">19. Multiple attributes (like +H and +R) can be used together?<div class="options"><label><input type="radio" name="q19" value="1"> true  </label><label><input type="radio" name="q19" value="0"> false  </label></div></div> 
+
+<div class="question">20. Can '*' represent zero (no) characters?<div class="options"><label><input type="radio" name="q20" value="1"> true</label><label><input type="radio" name="q20" value="0"> false</label></div></div>
+
+<div class="btn-container"><button type="button" class="btn-result" onclick="showScore()">View result</button></div> 
+
+</form> 
+<div id="result"></div> 
+</div> 
+<script> 
+function showScore(){ 
+let score = 0; 
+for(let i=1; i<=20; i++){ 
+let choices = document.getElementsByName('q'+i); 
+for(let j=0; j<choices.length; j++){ 
+if(choices[j].checked){ score += parseInt(choices[j].value); } 
+} 
+} 
+let resDiv = document.getElementById('result'); 
+resDiv.style.display = 'block'; 
+resDiv.innerHTML = "Your Final Score is: " + score + " / 20"; 
+window.scrollTo(0, document.body.scrollHeight); 
+} 
+</script> 
+
+<footer style="text-align: center; padding: 20px; margin-top: 40px;">
+    <p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">
+        Small Steps , Big Systems
+    </p>
+</footer>
+
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+</body> 
+</html> 

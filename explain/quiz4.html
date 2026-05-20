@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<style> 
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: AliceBlue; color: #333; margin: 0; padding: 0;}
+.header { background-color: White; padding: 30px 0; text-align: center; border-bottom: 5px solid RoyalBlue; width: 100%; box-sizing: border-box;  }
+.header h1 { margin: 0; font-size: 35px; color: navy;}
+.header p { margin: 5px 0 0; color: Gray; font-weight: bold; }
+.box { max-width: 1100px; margin: 40px auto; background: White; padding: 40px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; width:70%; }
+ h1.quiz-title { text-align: center; color: RoyalBlue; border-bottom: 2px solid LightSteelBlue; padding-bottom: 15px; margin-top: 0; }
+.section-title {  background: GhostWhite; padding: 15px; border-radius: 8px; color: RoyalBlue; margin-top: 30px; font-weight: bold; border-right: 4px solid CornflowerBlue; }
+.question { margin: 25px 0; padding: 20px; border-left: 6px solid RoyalBlue; background: #fafafa; border-radius: 0 10px 10px 0;}
+.options label { display: block; padding: 10px; cursor: pointer; transition: 0.2s; border-radius: 5px;}
+.options label:hover { background: #f1f1f1; }
+input[type="radio"] { margin-right: 15px; cursor: pointer; transform: scale(1.3); }
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding:             12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-container { text-align: center; margin-top: 40px; margin-bottom: 20px; width: 100%; }
+.btn-container button:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-result { background-color: navy; color: white; padding: 15px 40px; border: 2px solid cornflowerblue; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.4s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.btn-result:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; box-shadow: 0 6px 15px cornflowerblue !important; }
+
+#result { 
+    margin-top: 30px; font-size: 28px; font-weight: bold; text-align: center; display: none; 
+    padding: 30px; color: Navy; background-color: AliceBlue; border: 2px solid CornflowerBlue; border-radius: 15px; box-shadow: 0 0 20px CornflowerBlue
+}
+</style>
+</head> 
+<body> 
+<div class="header">
+    <h1>OS <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+    <p>Operating Systems Quizs </p>
+</div>
+
+<div class="box"> 
+<h1><span style="color: royalblue;">OS Quiz (part 4) </span></h1> 
+<form id="quizForm"> 
+
+<div class="section-title">Choose from multiple(20 Questions)</div> 
+
+<div class="question">1. Which of these is NOT a necessary condition for deadlock ?<div class="options"><label><input type="radio" name="q1" value="0">Mutual Exclusion </label><label><input type="radio" name="q1" value="1"> Preemption</label><label><input type="radio" name="q1" value="0"> Circular Wait </label><label><input type="radio" name="q1" value="0"> Hold and Wait </label></div></div> 
+
+<div class="question">2. Banker's algorithm is used primarily for: <div class="options"><label><input type="radio" name="q2" value="1"> Deadlock Avoidance</label><label><input type="radio" name="q2" value="0"> Deadlock Prevention  </label><label><input type="radio" name="q2" value="0"> Deadlock Recovery  </label><label><input type="radio" name="q2" value="0"> Process Scheduling </label></div></div> 
+
+<div class="question">3. The Need matrix is calculated as:<div class="options"><label><input type="radio" name="q3" value="1"> Max - Allocation</label><label><input type="radio" name="q3" value="0"> Max + Allocation </label><label><input type="radio" name="q3" value="0"> Allocation - Max </label><label><input type="radio" name="q3" value="0"> Available - Max </label></div></div> 
+
+<div class="question">4. A system is in a safe state if:<div class="options"><label><input type="radio" name="q4" value="0"> Deadlock has occurred</label><label><input type="radio" name="q4" value="0"> No resources are available </label><label><input type="radio" name="q4" value="1"> A safe sequence exists</label><label><input type="radio" name="q4" value="0"> All processes stop </label></div></div> 
+
+<div class="question">5. Wait-for graph is used for deadlock detection in :<div class="options"><label><input type="radio" name="q5" value="0"> Multiple instance resource types</label><label><input type="radio" name="q5" value="1"> Signal instance resource types </label><label><input type="radio" name="q5" value="0"> Distributed systems only</label><label><input type="radio" name="q5" value="0"> All resource types</label></div></div> 
+
+<div class="question">6. Resource-Allocation Graph with a cycle and single instances means:<div class="options"><label><input type="radio" name="q6" value="0"> Safe state </label><label><input type="radio" name="q6" value="1"> No deadlock </label><label><input type="radio" name="q6" value="0"> ignores the error </label><label><input type="radio" name="q6" value="0"> waiting</label></div></div> 
+
+<div class="question">7. Which of these is a disadvantage of the time shiring system?<div class="options"><label><input type="radio" name="q7" value="0"> CPU </label><label><input type="radio" name="q7" value="0"> less complex than batch </label><label><input type="radio" name="q7" value="0"> Starvation only </label><label><input type="radio" name="q7" value="1"> Deadlock exists </label></div></div> 
+
+<div class="question">8. A dashed line in a Resource-Allocation Graph represents:<div class="options"><label><input type="radio" name="q8" value="0"> Assignment edge </label><label><input type="radio" name="q8" value="1"> Claim edge </label><label><input type="radio" name="q8" value="0"> Release edge</label><label><input type="radio" name="q8" value="0"> Request edge </label></div></div> 
+
+<div class="question">9. Deadlock prevention works by:<div class="options"><label><input type="radio" name="q9" value="1"> Disallowing one of the 4 conditions </label><label><input type="radio" name="q9" value="0"> ignoring the problem </label><label><input type="radio" name="q9" value="0"> Terminating processes </label><label><input type="radio" name="q9" value="0"> Adding more CPUs </label></div></div> 
+
+<div class="question">10. The "Ostrich Algorithm" means:<div class="options"><label><input type="radio" name="q10" value="1"> Ignoring the deadlock problem</label><label><input type="radio" name="q10" value="0"> Solving it immediately</label><label><input type="radio" name="q10" value="0"> Preventing it</label><label><input type="radio" name="q10" value="0"> Restarting the system </label></div></div>
+
+<div class="question">11. If a system is in an unsafe state , a deadlock must occur.<div class="options"><label><input type="radio" name="q11" value="0"> True</label><label><input type="radio" name="q11" value="1"> False </label></div></div> 
+
+<div class="question">12. Mutal Exclusion is required for shareable resources.<div class="options"><label><input type="radio" name="q12" value="0"> True </label><label><input type="radio" name="q12" value="1"> False</label></div></div> 
+
+<div class="question">13. Preemption means a resource can be taken away forcibly.<div class="options"><label><input type="radio" name="q13" value="1"> True</label><label><input type="radio" name="q13" value="0"> False </label></div></div> 
+
+<div class="question">14. Circular wait condition involves a closed chain of processes.<div class="options"><label><input type="radio" name="q14" value="1"> True</label><label><input type="radio" name="q14" value="0"> False </label></div></div> 
+
+<div class="question">15. Deadlock avoidance is more restrictive than prevention.<div class="options"><label><input type="radio" name="q15" value="0"> True</label><label><input type="radio" name="q15" value="1"> False </label></div></div> 
+
+<div class="question">16. A safe state is a subset of an unsafe state.<div class="options"><label><input type="radio" name="q16" value="0"> True </label><label><input type="radio" name="q16" value="1"> False </label></div></div> 
+
+<div class="question">17. Deadlock detection algorithms are run frequently to minimize overhead.<div class="options"><label><input type="radio" name="q17" value="0"> True </label><label><input type="radio" name="q17" value="1"> False </label></div></div> 
+
+<div class="question">18. Terminating all deadlocked processes is a way to recover><div class="options"><label><input type="radio" name="q18" value="1"> True </label><label><input type="radio" name="q18" value="0"> False </label></div></div> 
+
+<div class="question">19. Starvation is the same as deadlock.<div class="options"><label><input type="radio" name="q19" value="0"> True </label><label><input type="radio" name="q19" value="1"> False </label></div></div> 
+
+<div class="question">20. Resource allocation graph can have cycles without a deadlock.<div class="options"><label><input type="radio" name="q20" value="1"> True</label><label><input type="radio" name="q20" value="0"> False</label></div></div> 
+
+<div class="btn-container"><button type="button" class="btn-result" onclick="showScore()">View result</button></div> 
+
+</form> 
+<div id="result"></div> 
+</div> 
+<script> 
+function showScore(){ 
+let score = 0; 
+for(let i=1; i<=20; i++){ 
+let choices = document.getElementsByName('q'+i); 
+for(let j=0; j<choices.length; j++){ 
+if(choices[j].checked){ score += parseInt(choices[j].value); } 
+} 
+} 
+let resDiv = document.getElementById('result'); 
+resDiv.style.display = 'block'; 
+resDiv.innerHTML = "Your Final Score is: " + score + " / 20"; 
+window.scrollTo(0, document.body.scrollHeight); 
+} 
+</script> 
+
+<footer style="text-align: center; padding: 20px; margin-top: 40px;">
+    <p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">
+        Small Steps , Big Systems
+    </p>
+</footer>
+
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+</body> 
+</html>

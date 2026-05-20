@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page - OS Course</title>
+<style>
+    body { background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; text-align: center; }
+    .main-box { max-width: 1000px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px cornflowerblue; }
+    .nav-buttons { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
+    .btn { width: 280px; padding: 15px; background-color: cornflowerblue; color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.4s; text-decoration: none; font-size: 16px; }
+
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+</style>
+</head>
+<body>
+
+<div style="text-align: center; padding: 30px 10px; background-color: #ffffff; border-bottom: 5px solid cornflowerblue;">
+    <h1><span style="color: navy;">OS</span> <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+    <p style="color: #555; font-size: 14px; text-transform: uppercase;">Operating Systems Practical Quizes</p>
+</div>
+
+<div class="main-box">
+    <h1 style="border-bottom: 2px solid navy; display: inline-block; padding-bottom: 10px; color: navy;">Practical Lab Quizes</h1>
+    <p style="font-size: 18px; margin-top: 10px;">Select a quiz to start examing:</p>
+
+    <div class="nav-buttons">
+        <button class="btn" onclick="location.href='quiz1.html'">Quiz Section 1</button>
+        <button class="btn" onclick="location.href='quiz2.html'"> Quiz Section 2</button>
+        <button class="btn" onclick="location.href='quiz3.html'">Quiz Section 3</button>
+        <button class="btn" onclick="location.href='quiz4.html'">Quiz Section 4</button>
+        <button class="btn" onclick="location.href='quiz5.html'">Quiz Section 5</button>
+        <button class="btn" onclick="location.href='quiz6.html'">Quiz Section 6</button>
+        <button class="btn" onclick="location.href='quiz7.html'">Quiz Section 7</button>
+
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 20px;">
+    <p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">Small Steps, Big Systems</p>
+</footer>
+
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+
+</body>
+</html>

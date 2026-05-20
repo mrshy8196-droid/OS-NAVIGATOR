@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<style> 
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: AliceBlue; color: #333; margin: 0; padding: 0;}
+.header { background-color: White; padding: 30px 0; text-align: center; border-bottom: 5px solid RoyalBlue; width: 100%; box-sizing: border-box;  }
+.header h1 { margin: 0; font-size: 35px; color: navy;}
+.header p { margin: 5px 0 0; color: Gray; font-weight: bold; }
+.box { max-width: 1100px; margin: 40px auto; background: White; padding: 40px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; width:70%; }
+ h1.quiz-title { text-align: center; color: RoyalBlue; border-bottom: 2px solid LightSteelBlue; padding-bottom: 15px; margin-top: 0; }
+.section-title {  background: GhostWhite; padding: 15px; border-radius: 8px; color: RoyalBlue; margin-top: 30px; font-weight: bold; border-right: 4px solid CornflowerBlue; }
+.question { margin: 25px 0; padding: 20px; border-left: 6px solid RoyalBlue; background: #fafafa; border-radius: 0 10px 10px 0;}
+.options label { display: block; padding: 10px; cursor: pointer; transition: 0.2s; border-radius: 5px;}
+.options label:hover { background: #f1f1f1; }
+input[type="radio"] { margin-right: 15px; cursor: pointer; transform: scale(1.3); }
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding:             12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-container { text-align: center; margin-top: 40px; margin-bottom: 20px; width: 100%; }
+.btn-container button:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-result { background-color: navy; color: white; padding: 15px 40px; border: 2px solid cornflowerblue; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.4s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.btn-result:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; box-shadow: 0 6px 15px cornflowerblue !important; }
+
+#result { 
+    margin-top: 30px; font-size: 28px; font-weight: bold; text-align: center; display: none; 
+    padding: 30px; color: Navy; background-color: AliceBlue; border: 2px solid CornflowerBlue; border-radius: 15px; box-shadow: 0 0 20px CornflowerBlue
+}
+</style>
+</head> 
+<body> 
+<div class="header">
+    <h1>OS <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+    <p>Operating Systems Quizs </p>
+</div>
+
+<div class="box"> 
+<h1><span style="color: royalblue;">OS Quiz (part 1) </span></h1> 
+<form id="quizForm"> 
+
+<div class="section-title">Choose from multiple(20 Questions)</div> 
+
+<div class="question">1. Which system call in used to create a new process?<div class="options"><label><input type="radio" name="q1" value="0">end about </label><label><input type="radio" name="q1" value="0"> wait event</label><label><input type="radio" name="q1" value="1"> create process </label><label><input type="radio" name="q1" value="0"> device release </label></div></div> 
+
+<div class="question">2. in layer approach the user program is typically at which layer?<div class="options"><label><input type="radio" name="q2" value="0"> layer 0</label><label><input type="radio" name="q2" value="0"> layer 2  </label><label><input type="radio" name="q2" value="0"> layer 4 </label><label><input type="radio" name="q2" value="1"> layer 5 </label></div></div> 
+
+<div class="question">3. Operation System is a:<div class="options"><label><input type="radio" name="q3" value="0"> input type</label><label><input type="radio" name="q3" value="1"> a program that management computer resource</label><label><input type="radio" name="q3" value="0"> type of memory </label><label><input type="radio" name="q3" value="0"> program language </label></div></div> 
+
+<div class="question">4. The main goal of an operation system is a:<div class="options"><label><input type="radio" name="q4" value="0"> run games only</label><label><input type="radio" name="q4" value="1"> manage hardware and provide user interface </label><label><input type="radio" name="q4" value="0"> increase screen size</label><label><input type="radio" name="q4" value="0"> delete files </label></div></div> 
+
+<div class="question">5. Which of following is a computer system component?<div class="options"><label><input type="radio" name="q5" value="0"> hardware</label><label><input type="radio" name="q5" value="0"> OS </label><label><input type="radio" name="q5" value="0"> app program</label><label><input type="radio" name="q5" value="1"> all of above </label></div></div> 
+
+<div class="question">6. What does the OS do if a program is not function properly?<div class="options"><label><input type="radio" name="q6" value="0"> deletes the hard drive </label><label><input type="radio" name="q6" value="1"> takes control,stop the app,and display error </label><label><input type="radio" name="q6" value="0"> ignores the error </label><label><input type="radio" name="q6" value="0"> waiting</label></div></div> 
+
+<div class="question">7. Which of these is a disadvantage of the time shiring system?<div class="options"><label><input type="radio" name="q7" value="0"> CPU </label><label><input type="radio" name="q7" value="0"> less complex than batch </label><label><input type="radio" name="q7" value="1"> memory management and protection required </label><label><input type="radio" name="q7" value="0"> waiting </label></div></div> 
+
+<div class="question">8. System programs like web browsers are called ?<div class="options"><label><input type="radio" name="q8" value="0"> status information </label><label><input type="radio" name="q8" value="1"> application programs </label><label><input type="radio" name="q8" value="0"> file manipulation</label><label><input type="radio" name="q8" value="0"> programming language </label></div></div> 
+
+<div class="question">9. In asymmetric multiprocessing :<div class="options"><label><input type="radio" name="q9" value="0"> All process identical </label><label><input type="radio" name="q9" value="1"> Each processor assigned specific </label><label><input type="radio" name="q9" value="0"> memory not used </label><label><input type="radio" name="q9" value="0"> Only CPU exists </label></div></div> 
+
+<div class="question">10. The acronym "SPOOL" involves using what as a huge buffer?<div class="options"><label><input type="radio" name="q10" value="0"> CPU cache</label><label><input type="radio" name="q10" value="1"> The Disk</label><label><input type="radio" name="q10" value="0"> RAM</label><label><input type="radio" name="q10" value="0"> Magnetic Tape</label></div></div>
+
+<div class="question">11. Which layer in the layered approach is responsible for Hardware?<div class="options"><label><input type="radio" name="q11" value="1"> Layer 0 </label><label><input type="radio" name="q11" value="0"> Layer 1 </label><label><input type="radio" name="q11" value="0"> Layer 2  </label><label><input type="radio" name="q11" value="0"> Layer3 </label></div></div> 
+
+<div class="question">12. Which is NOT a function of process management?<div class="options"><label><input type="radio" name="q12" value="0"> suspending processes </label><label><input type="radio" name="q12" value="1"> Allocating memory space</label><label><input type="radio" name="q12" value="0"> creating processes</label><label><input type="radio" name="q12" value="0"> deadloac handling</label></div></div> 
+
+<div class="question">13. Which system call category does "Get/Set time"fall under?<div class="options"><label><input type="radio" name="q13" value="0"> file management</label><label><input type="radio" name="q13" value="0"> device management</label><label><input type="radio" name="q13" value="1"> information maintenance</label><label><input type="radio" name="q13" value="0"> communication</label></div></div> 
+
+<div class="question">14. In the "Message Passing" model :<div class="options"><label><input type="radio" name="q14" value="0"> same memory region</label><label><input type="radio" name="q14" value="1"> exchange through IPC </label><label><input type="radio" name="q14" value="0"> no system calls </label><label><input type="radio" name="q14" value="0"> faster than shared memory</label></div></div> 
+
+<div class="question">15. Primary goal of the "Batch System"?<div class="options"><label><input type="radio" name="q15" value="1"> increase speed by groaping jops</label><label><input type="radio" name="q15" value="0">  multiple interaction</label><label><input type="radio" name="q15" value="0"> GUL interface </label><label><input type="radio" name="q15" value="0"> real-time experiments</label></div></div> 
+
+<div class="question">16. Which unit handels high-speed data transfers to memory?<div class="options"><label><input type="radio" name="q16" value="1"> DMA </label><label><input type="radio" name="q16" value="0"> CPU</label><label><input type="radio" name="q16" value="0"> Disk </label><label><input type="radio" name="q16" value="0"> Table</label></div></div> 
+
+<div class="question">17. Main memory is volatile becouse it loses data when:<div class="options"><label><input type="radio" name="q17" value="0"> Full </label><label><input type="radio" name="q17" value="0"> Used </label><label><input type="radio" name="q17" value="1"> Power is off </label><label><input type="radio" name="q17" value="0"> Overheated</label></div></div> 
+
+<div class="question">18. The command interpreter is also known as:<div class="options"><label><input type="radio" name="q18" value="0"> Hardware </label><label><input type="radio" name="q18" value="1"> The Shell </label><label><input type="radio" name="q18" value="0"> The Kernel</label><label><input type="radio" name="q18" value="0"> App;ication</label></div></div> 
+
+<div class="question">19. Which system call is used for "File Manipulation"?<div class="options"><label><input type="radio" name="q19" value="0"> wait event </label><label><input type="radio" name="q19" value="0"> request device </label><label><input type="radio" name="q19" value="1"> read,write,reposition</label><label><input type="radio" name="q19" value="0"> get time </label></div></div> 
+
+<div class="question">20. In "Layered Approch" Layer 0 is responsible for ?<div class="options"><label><input type="radio" name="q20" value="1"> Hardware</label><label><input type="radio" name="q20" value="0"> CPU scheduling</label><label><input type="radio" name="q20" value="0"> memory management</label><label><input type="radio" name="q20" value="0"> user program</label></div></div> 
+
+<div class="btn-container"><button type="button" class="btn-result" onclick="showScore()">View result</button></div> 
+
+</form> 
+<div id="result"></div> 
+</div> 
+<script> 
+function showScore(){ 
+let score = 0; 
+for(let i=1; i<=20; i++){ 
+let choices = document.getElementsByName('q'+i); 
+for(let j=0; j<choices.length; j++){ 
+if(choices[j].checked){ score += parseInt(choices[j].value); } 
+} 
+} 
+let resDiv = document.getElementById('result'); 
+resDiv.style.display = 'block'; 
+resDiv.innerHTML = "Your Final Score is: " + score + " / 20"; 
+window.scrollTo(0, document.body.scrollHeight); 
+} 
+</script> 
+
+<footer style="text-align: center; padding: 20px; margin-top: 40px;">
+    <p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">
+        Small Steps , Big Systems
+    </p>
+</footer>
+
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+</body> 
+</html>

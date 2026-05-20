@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<style> 
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: AliceBlue; color: #333; margin: 0; padding: 0; }
+.header { background-color: White; padding: 30px 0; text-align: center; border-bottom: 5px solid RoyalBlue; width: 100%; box-sizing: border-box; }
+.header h1 { margin: 0; font-size: 35px; color: navy; }
+.header p { margin: 5px 0 0; color: Gray; font-weight: bold; }
+.box { max-width: 1150px; margin: 40px auto; background: White; padding: 40px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; }
+ h1.quiz-title { text-align: center; color: RoyalBlue; border-bottom: 2px solid LightSteelBlue; padding-bottom: 15px; margin-top: 0; }
+.section-title { background: GhostWhite; padding: 15px; border-radius: 8px; color: RoyalBlue; margin-top: 30px; font-weight: bold; border-right: 4px solid CornflowerBlue; }
+.question { margin: 25px 0; padding: 20px; border-left: 6px solid RoyalBlue; background: #fafafa; border-radius: 0 10px 10px 0;}
+.options label { display: block; padding: 10px; cursor: pointer; transition: 0.2s; border-radius: 5px;}
+.options label:hover { background: #f1f1f1; }
+input[type="radio"] { margin-right: 15px; cursor: pointer; transform: scale(1.3); }
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding:             12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-container { text-align: center; margin-top: 40px; margin-bottom: 20px; width: 100%; }
+.btn-container button:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+
+.btn-result { background-color: navy; color: white; padding: 15px 40px; border: 2px solid cornflowerblue; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.4s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.btn-result:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; box-shadow: 0 6px 15px cornflowerblue !important; }
+
+#result { 
+    margin-top: 30px; font-size: 28px; font-weight: bold; text-align: center; display: none; 
+    padding: 30px; color: Navy; background-color: AliceBlue; border: 2px solid CornflowerBlue; border-radius: 15px; box-shadow: 0 0 20px CornflowerBlue
+}
+</style>
+</head> 
+<body> 
+<div class="header">
+    <h1>OS <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+    <p>Operating Systems Practical Lab </p>
+</div>
+
+<div class="box"> 
+<h1><span style="color: royalblue;">Quiz Section 7 </span></h1> 
+<form id="quizForm"> 
+
+<div class="section-title">Choose from multiple(20 Questions)</div> 
+
+<div class="question">1. Which algorithm uses time quantum?
+<div class="options"><label><input type="radio" name="q1" value="0"> FCFS </label><label><input type="radio" name="q1" value="1"> RR </label><label><input type="radio" name="q1" value="0"> SJF   </label><label><input type="radio" name="q1" value="0"> Priority </label></div></div> 
+
+<div class="question">2. Best algorithm for average waiting time?<div class="options"><label><input type="radio" name="q2" value="0"> FCFS </label><label><input type="radio" name="q2" value="1"> SJF </label><label><input type="radio" name="q2" value="0"> Priority  </label><label><input type="radio" name="q2" value="0"> RR  </label></div></div> 
+
+<div class="question">3. Preemptive means?<div class="options"><label><input type="radio" name="q3" value="0"> No interruption</label><label><input type="radio" name="q3" value="0"> No CPU</label><label><input type="radio" name="q3" value="0">  Delete process</label><label><input type="radio" name="q3" value="1"> OS can interrupt</label></div></div> 
+
+<div class="question">4. FCFS problem?
+<div class="options"><label><input type="radio" name="q4" value="0"> Starvation </label><label><input type="radio" name="q4" value="1"> Convoy effect</label><label><input type="radio" name="q4" value="0"> Deadlock </label><label><input type="radio" name="q4" value="0"> Paging</label></div></div> 
+
+<div class="question">5. Aging solves?<div class="options"><label><input type="radio" name="q5" value="1">Starvation </label><label><input type="radio" name="q5" value="0"> Deadlock </label><label><input type="radio" name="q5" value="0"> Paging </label><label><input type="radio" name="q5" value="0"> Fragmentation</label></div></div> 
+
+<div class="question">6. RR uses?
+<div class="options"><label><input type="radio" name="q6" value="0"> Priority </label><label><input type="radio" name="q6" value="0"> Memory   </label><label><input type="radio" name="q6" value="1"> Time quantum</label><label><input type="radio" name="q6" value="0"> Disk  </label></div></div> 
+
+<div class="question">7. Ready queue contains ?<div class="options"><label><input type="radio" name="q7" value="0">  Running processes</label><label><input type="radio" name="q7" value="0"> New processes</label><label><input type="radio" name="q7" value="0"> Finished</label><label><input type="radio" name="q7" value="1"> Waiting (Ready) processes</label></div></div> 
+
+<div class="question">8. Turnaround time = ?<div class="options"><label><input type="radio" name="q8" value="0"> AT - CT</label><label><input type="radio" name="q8" value="1"> CT - AT </label><label><input type="radio" name="q8" value="0"> BT - AT</label><label><input type="radio" name="q8" value="0"> ST - CT</label></div></div> 
+
+<div class="question">9. SJF selects based on ?<div class="options"><label><input type="radio" name="q9" value="1"> Burst time</label><label><input type="radio" name="q9" value="0"> Priority </label><label><input type="radio" name="q9" value="0"> Arrival </label><label><input type="radio" name="q9" value="0"> Memory</label></div></div> 
+
+<div class="question">10. Scheduler is part of?<div class="options"><label><input type="radio" name="q10" value="1"> OS</label><label><input type="radio" name="q10" value="0"> CPU  </label><label><input type="radio" name="q10" value="0"> RAM  </label><label><input type="radio" name="q10" value="0"> Disk</label></div></div>
+
+<div class="question">11. Context switching is?<div class="options"><label><input type="radio" name="q11" value="0"> Memory swap</label><label><input type="radio" name="q11" value="0"> Booting</label><label><input type="radio" name="q11" value="0"> File move</label><label><input type="radio" name="q11" value="1"> Process switch</label></div></div> 
+
+<div class="question">12.RR is fair because?<div class="options"><label><input type="radio" name="q12" value="0"> Priority  </label><label><input type="radio" name="q12" value="0"> CPU speed  </label><label><input type="radio" name="q12" value="1"> Time sharing  </label><label><input type="radio" name="q12" value="0"> Memory   </label></div></div> 
+
+<div class="question">13. Starvation happens in?<div class="options"><label><input type="radio" name="q13" value="0"> FCFS </label><label><input type="radio" name="q13" value="1"> SJF/Priority</label><label><input type="radio" name="q13" value="0"> RR </label><label><input type="radio" name="q13" value="0"> None</label></div></div> 
+
+<div class="question">14. CPU burst is time in?<div class="options"><label><input type="radio" name="q14" value="1"> CPU </label><label><input type="radio" name="q14" value="0"> Disk </label><label><input type="radio" name="q14" value="0"> RAM </label><label><input type="radio" name="q14" value="0"> Cache</label></div></div> 
+
+<div class="question">15. Gantt chart shows?<div class="options"><label><input type="radio" name="q15" value="1"> Scheduling  </label><label><input type="radio" name="q15" value="0"> Disk size  </label><label><input type="radio" name="q15" value="0"> Memory   </label><label><input type="radio" name="q15" value="0"> CPU temp</label></div></div> 
+
+<div class="question">16. Long processes in FCFS cause?<div class="options"><label><input type="radio" name="q16" value="0"> Faster CPU</label><label><input type="radio" name="q16" value="1"> Convoy effect</label><label><input type="radio" name="q16" value="0"> Cache hit</label><label><input type="radio" name="q16" value="0"> Boost</label></div></div> 
+
+<div class="question">17. FCFS is?<div class="options"><label><input type="radio" name="q17" value="0"> Random </label><label><input type="radio" name="q17" value="0"> AI-based</label><label><input type="radio" name="q17" value="1"> Simple </label><label><input type="radio" name="q17" value="0"> Complex </label></div></div> 
+
+<div class="question">18. Priority scheduling depends on?<div class="options"><label><input type="radio" name="q18" value="1"> Priority value </label><label><input type="radio" name="q18" value="0"> Time  </label><label><input type="radio" name="q18" value="0"> Disk  </label><label><input type="radio" name="q18" value="0"> Memory </label></div></div> 
+
+<div class="question">19. Round Robin is?<div class="options"><label><input type="radio" name="q19" value="0"> Non-preemptive </label><label><input type="radio" name="q19" value="1"> Preemptive </label><label><input type="radio" name="q19" value="0"> Static  </label><label><input type="radio" name="q19" value="0"> None</label></div></div> 
+
+<div class="question">20. Waiting Time formula uses arrival time?<div class="options"><label><input type="radio" name="q20" value="1"> true</label><label><input type="radio" name="q20" value="0"> false</label></div></div>
+
+<div class="btn-container"><button type="button" class="btn-result" onclick="showScore()">View result</button></div> 
+
+</form> 
+<div id="result"></div> 
+</div> 
+<script> 
+function showScore(){ 
+let score = 0; 
+for(let i=1; i<=20; i++){ 
+let choices = document.getElementsByName('q'+i); 
+for(let j=0; j<choices.length; j++){ 
+if(choices[j].checked){ score += parseInt(choices[j].value); } 
+} 
+} 
+let resDiv = document.getElementById('result'); 
+resDiv.style.display = 'block'; 
+resDiv.innerHTML = "Your Final Score is: " + score + " / 20"; 
+window.scrollTo(0, document.body.scrollHeight); 
+} 
+</script> 
+
+<footer style="text-align: center; padding: 20px; margin-top: 40px;">
+    <p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">
+        Small Steps , Big Systems
+    </p>
+</footer>
+
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+</body> 
+</html> 

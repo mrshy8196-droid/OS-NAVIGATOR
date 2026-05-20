@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OS Navigator - Basic Lab Hub</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; color: #333; margin: 0; padding: 0; }
+.header { background-color: #f8f9fa; padding: 30px 5%; text-align: center; border-bottom: 4px solid cornflowerblue; width: 100%; box-sizing:border-box}
+.container { background-color:white; max-width: 1150px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; }
+h1 { color: navy; margin: 0; font-size: 28px; }
+h2 { color: cornflowerblue; border-bottom: 2px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05); background-color: white;}
+.pdf-section { background: #fafafa; padding: 15px; border-radius: 8px; border: 1px solid cornflowerblue; margin: 20px 0; text-align: center; }
+.quiz-box { display: flex; justify-content: space-around; margin: 30px 0; }
+.btn { padding: 15px 30px; font-size: 16px; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: 0.3s; font-weight: bold; border: none; }
+.btn-blue { background-color: cornflowerblue; color: white; }
+.btn-navy { background-color: navy; color: white; }
+.nav-footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding:             12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>OS <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+<p>Operating Systems Practical Lab </p>
+</div>
+<div class="container">
+<h2><span style="color: royalblue;"> Wildcards & Attributes ( Section 3 & Section 4 )</span></h2>
+<h2>Section 3: Wildcards </h2> 
+<h3>Summary</h3> 
+<p style="font-size:22px;">Wildcards are symbols used to represent one or more characters. The (*) represents zero or more characters, while (?) represents exactly one character. Use 'ATTRIB' to change file properties like Hidden (+H) or Read-only (+R).</p> 
+<h3 style="margin-top:30px;">Commands Table</h3> 
+<table border="1" width="100%" style="border-color:cornflowerblue; font-size:18px; text-align:left;" cellpadding="10"> 
+<tr style="background-color:royalblue;"><th>Command</th><th>Description</th></tr> 
+<tr><td>DIR *.txt</td><td>Displays all files ending with .txt</td></tr> 
+<tr><td>DEL *.*</td><td>Deletes all files in the current folder</td></tr> 
+<tr><td>COPY a* folder</td><td>Copies files starting with 'a' to a folder</td></tr> 
+<tr><td>ATTRIB +H</td><td>Hides the file</td></tr> 
+<tr><td>ATTRIB -R</td><td>Removes the read-only attribute</td></tr> 
+</table> 
+<h2>Section 4: Attributes</h2> 
+<h3>Summary</h3> 
+<p style="font-size:22px;">Environment variables store information used by the OS. System variables are for all users, user variables are for one user. Batch files (.bat) automate tasks.</p> 
+<h3 style="margin-top:30px;">Commands Table</h3> 
+<table border="1" width="100%" style="border-color:cornflowerblue; font-size:18px; text-align:left;" cellpadding="10"> 
+<tr style="background-color:royalblue;"><th>Command</th><th>Description</th></tr> 
+<tr><td>set</td><td>Displays all environment variables</td></tr> 
+<tr><td>echo %username%</td><td>Displays current user name</td></tr> 
+<tr><td>echo %temp%</td><td>Displays temporary files path</td></tr> 
+<tr><td>@echo off</td><td>Hides commands and shows results</td></tr> 
+<tr><td>pause</td><td>Stops execution until a key is pressed</td></tr> 
+</table> 
+<div class="pdf-section">
+<h3 style="color: navy; margin-bottom: 15px;">Lab Study Guide</h3>
+<p style="color: #666; font-size: 14px;">Explore the full practical steps for Sections 3 & 4</p>     
+<div style="position: relative; overflow: hidden; padding-top: 56.25%;"> <iframe 
+src="sec3,4 pdf.pdf" 
+style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 3px solid cornflowerblue; border-radius: 12px;" 
+frameborder="0">
+</iframe>
+</div>
+<br>
+</div>
+<h2>Practice Quizzes</h2>
+<div class="quiz-box">
+<a href="quiz3.html" class="btn btn-navy">Section 3 Quiz</a>
+<a href="quiz4.html" class="btn btn-navy">Section 4 Quiz</a>
+</div>
+</div>
+<footer style="text-align: center; padding: 20px; margin-top: 40px;">
+<p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">
+Small Steps , Big Systems
+</p>
+</footer>
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+</body>
+</html>

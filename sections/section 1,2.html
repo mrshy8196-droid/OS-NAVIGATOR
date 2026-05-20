@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OS Navigator - Basic Lab Hub</title>
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; color: #333; margin: 0; padding: 0; }
+.header { background-color: #f8f9fa; padding: 30px 5%; text-align: center; border-bottom: 4px solid cornflowerblue; width: 100%; box-sizing:border-box}
+.container { background-color:white; max-width: 1150px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; }
+h1 { color: navy; margin: 0; font-size: 28px; }
+h2 { color: cornflowerblue; border-bottom: 2px solid #eee; box-shadow: 0 5px 20px rgba(0,0,0,0.05); background-color: white;}
+.pdf-section { background: #fafafa; padding: 15px; border-radius: 8px; border: 1px solid cornflowerblue; margin: 20px 0; text-align: center; }
+.quiz-box { display: flex; justify-content: space-around; margin: 30px 0; }
+.btn { padding: 15px 30px; font-size: 16px; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; transition: 0.3s; font-weight: bold; border: none; }
+.btn-blue { background-color: cornflowerblue; color: white; }
+.btn-navy { background-color: navy; color: white; }
+.nav-footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; }
+.home-btn { position: fixed !important; top: 20px !important; right: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding:             12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+.back-btn-top { position: fixed !important; top: 20px !important; left: 20px !important; z-index: 99999 !important; background-color: navy !important; color: white !important; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid cornflowerblue; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.4s; display: inline-block; }
+.btn:hover, .home-btn:hover, .back-btn-top:hover { background-color: royalblue !important; transform: translateY(-3px) !important; color: white !important; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>OS <span style="color: cornflowerblue;">NAVIGATOR</span></h1>
+<p>Operating Systems Practical Lab </p>
+</div>
+<div class="container">
+<h2><span style="color: royalblue;">Basic Interfaces & System Commands ( Section 1 & Section 2 )</span></h2>
+<p>This module covers GUI vs CLI differences and essential file management commands.</p>
+<h2>Section 1: GUI vs CLI Operations</h2> 
+<h3>Summary</h3> 
+<p style="font-size:18px;">GUI (Graphical User Interface) allows users to interact using mouse and windows, while CLI (Command Line Interface) uses text commands. Both can perform system tasks like managing processes, folders, and system information.</p> 
+<h3>Commands Table</h3> 
+<table border="1" width="100%" style="border-color:cornflowerblue; font-size:18px; text-align:left;" cellpadding="10"> 
+<tr style="background-color:royalblue;"><th>Task</th><th>GUI Method</th><th>CLI Command</th></tr> 
+<tr><td>Open Task Manager</td><td>Ctrl + Shift + Esc</td><td>taskmgr</td></tr> 
+<tr><td>End Program</td><td>Select program then click End Task</td><td>taskkill /IM program.exe OR taskkill /PID number</td></tr> 
+<tr><td>Get PID</td><td>From Task Manager (Details tab)</td><td>tasklist</td></tr> 
+<tr><td>System Information</td><td>Right click This PC then Properties</td><td>systeminfo</td></tr> 
+<tr><td>Create Folder</td><td>Right click then New then Folder</td><td>mkdir foldername</td></tr> 
+<tr><td>Delete Folder</td><td>Right click then Delete</td><td>rmdir foldername</td></tr> 
+<tr><td>Go to Desktop</td><td>Open Desktop normally</td><td>cd Desktop</td></tr> 
+<tr><td>Disk Information</td><td>Right click disk then Properties</td><td>wmic logicaldisk get size,freespace,caption</td></tr> 
+</table> 
+<h2>Section 2: CMD Commands and File System Basics</h2> 
+<h3>VER Command</h3> 
+<p>Displays Windows operating system version.</p> 
+<h3>CLS Command</h3> 
+<p>Clears the screen only.</p> 
+<h3>File vs Folder</h3> 
+<p>File stores data and has extension, folder organizes files.</p> 
+<h3>File Extension</h3> 
+<p>Part after dot like .txt, .jpg, .mp3.</p> 
+<h3>CMD Commands Summary</h3> 
+<p>mkdir, cd, rmdir, echo, copy con, ren, move, date, time.</p> 
+<div class="pdf-section">
+<h3 style="color: navy; margin-bottom: 15px;">Lab Study Guide</h3>
+<p style="color: #666; font-size: 14px;">Explore the full practical steps for Sections 1 & 2</p>
+<div style="position: relative; overflow: hidden; padding-top: 56.25%;"> <iframe 
+src="sec1,2 pdf.pdf" 
+style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 3px solid cornflowerblue; border-radius: 12px;" 
+frameborder="0">
+</iframe>
+</div>
+<br>
+</div>
+<h2>Practice Quizzes</h2>
+<div class="quiz-box">
+<a href="quiz1.html" class="btn btn-navy">Section 1 Quiz</a>
+<a href="quiz2.html" class="btn btn-navy">Section 2 Quiz</a>
+</div>
+</div>
+<footer style="text-align: center; padding: 20px; margin-top: 40px;">
+<p style="color: cornflowerblue; font-size: 12px; border-top: 1px solid #eee; display: inline-block; padding-top: 10px;">
+Small Steps , Big Systems
+</p>
+</footer>
+<a href="javascript:history.back()" class="back-btn-top">Back</a>
+<a href="..\home Page\home.html" class="home-btn">Home Page</a>
+</body>
+</html>
