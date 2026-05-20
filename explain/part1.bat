@@ -6,6 +6,7 @@ echo ^<!DOCTYPE html^> > %filename%
 echo ^<html lang="en"^> >> %filename%
 echo ^<head^>^<meta charset="UTF-8"^>^<title^>OS Course Videos^</title^> >> %filename%
 echo ^<style^> >> %filename%
+echo @media screen and (max-width:768px){body{width:100vw!important;overflow-x:hidden!important;margin:0!important;padding:5px!important;}img,table,iframe{max-width:100%!important;height:auto!important;}} >> %filename%
 echo     body { font-family: 'Segoe UI', Arial, sans-serif; background-color: AliceBlue; color: #333; margin: 0; padding: 0; } >> %filename%
 echo     .header { background-color: White; padding: 30px 0; text-align: center; border-bottom: 5px solid RoyalBlue; width: 100%%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; } >> %filename%
 echo     .header h1 { margin: 0; font-size: 35px; color: navy; } >> %filename%

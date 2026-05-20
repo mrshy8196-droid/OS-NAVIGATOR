@@ -8,6 +8,7 @@ echo ^<head^> >> %filename%
 echo ^<meta charset="UTF-8"^> >> %filename%
 echo ^<title^>OS Navigator - First Design Original Size^</title^> >> %filename%
 echo ^<style^> >> %filename%
+echo @media screen and (max-width:768px){body{width:100vw!important;overflow-x:hidden!important;margin:0!important;padding:5px!important;}img,table,iframe{max-width:100%!important;height:auto!important;}} >> %filename%
 echo body { background-color: #f4f7fa; font-family: 'Segoe UI', sans-serif; margin: 0; overflow-x: hidden; } >> %filename%
 echo @keyframes slideInLeft { from { opacity: 0; transform: translateX(-100px); } to { opacity: 1; transform: translateX(0); } } >> %filename%
 echo @keyframes slideInRight { from { opacity: 0; transform: translateX(100px); } to { opacity: 1; transform: translateX(0); } } >> %filename%

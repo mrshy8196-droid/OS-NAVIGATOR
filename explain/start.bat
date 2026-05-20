@@ -9,6 +9,7 @@ echo ^<head^> >> %filename%
 echo ^<meta charset="UTF-8"^> >> %filename%
 echo ^<title^>OS Navigator - Main Page^</title^> >> %filename%
 echo ^<style^> >> %filename%
+echo @media screen and (max-width:768px){body{width:100vw!important;overflow-x:hidden!important;margin:0!important;padding:5px!important;}img,table,iframe{max-width:100%!important;height:auto!important;}} >> %filename%
 echo body { background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; text-align: center; } >> %filename%
 echo .header { text-align: center; padding: 30px 10px; background-color: #ffffff; border-bottom: 5px solid cornflowerblue; box-sizing: border-box; } >> %filename%
 echo .header h1 { margin: 0; font-size: 35px; } >> %filename%

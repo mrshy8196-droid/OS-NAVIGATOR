@@ -11,6 +11,7 @@ echo ^<head^> >> %file%
 echo ^<meta charset="UTF-8"^> >> %file%
 echo ^<title^>OS Navigator - Full Content^</title^> >> %file%
 echo ^<style^> >> %file%
+echo @media screen and (max-width:768px){body{width:100vw!important;overflow-x:hidden!important;margin:0!important;padding:5px!important;}img,table,iframe{max-width:100%!important;height:auto!important;}} >> %file%
 echo body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; color: #333; margin: 0; padding: 0; } >> %file%
 echo .header { background-color: #f8f9fa; padding: 30px 5%%; text-align: center; border-bottom: 4px solid cornflowerblue; width: 100%%; box-sizing:border-box} >> %file%
 echo .container { background-color:white; max-width: 1150px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow:0 10px 30px cornflowerblue; } >> %file%
