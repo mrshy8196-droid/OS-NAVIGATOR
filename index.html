@@ -154,16 +154,17 @@ document.getElementById(lastBox).classList.remove('hidden');
 }
 });
 function validateLogin(){
-const name=document.getElementById('username').value.trim();
-const id=document.getElementById('studentid').value.trim();
-const error=document.getElementById('error-msg');
-if(name===""||id===""){
+const name = document.getElementById('username').value.trim();
+const id = document.getElementById('studentid').value.trim();
+const error = document.getElementById('error-msg');  
+if(name === "" || id === ""){
 error.classList.remove('hidden');
-}else{
+} else {
 error.classList.add('hidden');
-document.getElementById('user-display').innerText=name;
-sessionStorage.setItem('os_user',name);
-switchView('login-box','dashboard-box');
+document.getElementById('user-display').innerText = name;     
+sessionStorage.setItem('os_user', name);
+sessionStorage.setItem('os_student_id', id); 
+switchView('login-box', 'dashboard-box');
 }
 }
 document.getElementById('username').addEventListener('keypress',function(e){
